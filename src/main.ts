@@ -1,85 +1,70 @@
 import './style.css'
-// import { countries } from './country';
-// import { webTechs } from './web_techs';
-
+import {countries} from "./countries";
+import {webTechs} from "./web_techs";
 
 const app = document.querySelector<HTMLDivElement>('#app')!
 
 app.innerHTML = `
   <h2>Tranning TS</h2>
 `
-//1. Declare an empty array
-let arrEmpty: unknown = [];
-console.log('arrEmpty:', arrEmpty)
 
-console.log('----------------------------------------------------');
+//1. Write a code which can give grades to students according to theirs scores:
+// let enterScore: number = Number(prompt('Enter score: '));
+//
+// if (!isNaN(enterScore)) {
+//     if (enterScore <= 100 || enterScore >= 80) {
+//         console.log('Score A');
+//     } else if (enterScore <= 89 || enterScore >= 70) {
+//         console.log('Score B');
+//     } else if (enterScore <= 69 || enterScore >= 60) {
+//         console.log('Score C');
+//     } else if (enterScore <= 59 || enterScore >= 50) {
+//         console.log('Score D');
+//     } else if (enterScore <= 49 || enterScore >= 0) {
+//         console.log('Score F');
+//     }
+// } else {
+//     console.log('Scores must be a number and not empty');
+// }
 
-//2. Declare an array with more than 5 number of elements
-let arrNumber: number[] = [1, 2, 3, 4, 5, 6, 7];
-console.log('arrNumber:', arrNumber)
 
-console.log('----------------------------------------------------');
+//2. Check if the season is Autumn, Winter, Spring or Summer. If the user input is :
+// let enterSeason: string = String(prompt('Enter season: '));
+//
+// switch (enterSeason !== '') {
+//     case enterSeason.toLowerCase() === 'september':
+//     case enterSeason.toLowerCase() === 'october':
+//     case enterSeason.toLowerCase() === 'november':
+//         console.log('The season is Autumn');
+//         break;
+//     case enterSeason.toLowerCase() === 'december':
+//     case enterSeason.toLowerCase() === 'january':
+//     case enterSeason.toLowerCase() === 'february':
+//         console.log('The season is Winter');
+//         break;
+//     case enterSeason.toLowerCase() === 'march':
+//     case enterSeason.toLowerCase() === 'april':
+//     case enterSeason.toLowerCase() === 'may':
+//         console.log('The season is Spring');
+//         break;
+//     case enterSeason.toLowerCase() === 'june':
+//     case enterSeason.toLowerCase() === 'july':
+//     case enterSeason.toLowerCase() === 'august':
+//         console.log('The season is Summer');
+//         break;
+//     default:
+//         console.log('Not month');
+//         break;
+// }
 
-//3. Find the length of your array (2)
-let lengthArrNumber: number = arrNumber.length;
-console.log('lengthArrNumber:', lengthArrNumber)
+//3. Check if a day is weekend day or a working day. Your script will take day as an input
+let dayWorking = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday'];
 
-console.log('----------------------------------------------------');
+let enterDay: string = String(prompt('Enter day: '));
 
-//4. Get the first item, the middle item and the last item of the array (2);
-let firstItem: number = arrNumber[0];
-let middleItem = arrNumber[Math.floor(arrNumber.length / 2)];
-let lastItem: number = arrNumber[arrNumber.length - 1]
-console.log('firstItem:', firstItem);
-console.log('middleItem:', middleItem);
-console.log('lastItem:', lastItem);
-
-console.log('----------------------------------------------------');
-
-//5. Declare an array called mixedDataTypes, put different data types in the array and find the length of the array. The array size should be greater than 5
-let mixedDataTypes: any[] = [1, '2', {}, [4], undefined, null];
-console.log('mixedDataTypes:', mixedDataTypes.length);
-
-console.log('----------------------------------------------------');
-
-//6. Declare an array variable name itCompanies and assign initial values Facebook, Google, Microsoft, Apple, IBM, Oracle and Amazon
-let itCompanies: string[] = ['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon'];
-
-//7. Print the array using console.log()
-console.log('itCompanies:', itCompanies);
-
-console.log('----------------------------------------------------');
-
-//8. Print the number of companies in the array
-console.log('Number of companies:', itCompanies.length);
-
-console.log('----------------------------------------------------');
-
-//9. Print the first company, middle and last company
-let firstCompany: string = itCompanies[0];
-let middleCompany: string = itCompanies[Math.floor(itCompanies.length / 2)];
-let lastCompany: string = itCompanies[itCompanies.length - 1];
-console.log('firstCompany:', firstCompany);
-console.log('middleCompany:', middleCompany);
-console.log('lastCompany:', lastCompany);
-
-console.log('----------------------------------------------------');
-
-//10. Print out each company
-for(let company of itCompanies) {
-    console.log('Company:', company)
+console.log(dayWorking.includes(enterDay.toLowerCase()))
+if (dayWorking.includes(enterDay.toLowerCase())) {
+    console.log(`${enterDay} is a working day`)
+} else {
+    console.log(`${enterDay} is a weekend`)
 }
-
-console.log('----------------------------------------------------');
-
-//11. Change each company name to uppercase one by one and print them out
-for(let company of itCompanies) {
-    console.log('Company name to uppercase:', company.toUpperCase())
-}
-
-console.log('----------------------------------------------------');
-
-// //12. Print the array like as a sentence: Facebook, Google, Microsoft, Apple, IBM,Oracle and Amazon are big IT companies
-// let itCompaniesCopy: string[] = ['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon'];
-// itCompaniesCopy.splice(6, 1);
-// itCompaniesCopy[itCompaniesCopy.length - 2] = 'Oracle và Amazon';
